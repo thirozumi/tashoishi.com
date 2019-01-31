@@ -16,10 +16,5 @@
   "devel": true,
   "strict": true,
   "trailing": true,
-  "smarttabs": true,
-  "globals": {
-   "$": false,
-    "jQuery": false,
-    "feature": false
-  }
+  "smarttabs": true
 }
