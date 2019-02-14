@@ -1,15 +1,21 @@
 # gulp-pug-webapp
 
+## Installation
+
+If necessary: https://nodejs.org/en/download/
+
+```
+$ npm install
+```
+
 ## Build
 
 ```
-npm install
-gulp
-open dist/index.html
+$ npm run build
 ```
 
-## Dev
+## Watch
 
 ```
-gulp watch
+$ npm run watch
 ```
