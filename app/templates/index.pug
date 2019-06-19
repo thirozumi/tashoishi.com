@@ -8,16 +8,22 @@ block head
   - var og_img = 'og.jpg';
 
 block main
+  header
+    .container-md
+      img(src=images + "tasho-ishi.png", alt="Tasho Ishi")
   main
     .container-md
-      h1
-        img(src=images + "tasho-ishi.png", alt="Tasho Ishi")
       .row
         .col-sm-6
-          p
-            img(src=images + 'p1.jpg', alt='Jacket')
+          .section__jacket
+            p
+              img(src=images + 'dentsu2060.jpg', alt='Jacket')
         .col-sm-6
-          .text__description
+          .section__header
+            h1
+              | dentsu2060
+              small Tasho Ishi
+          .section__description
             p
               | A science fantasy symphonia distilled from the unconscious stress and stimulation culled from Tokyo's   buildings, fashion, illumination, advertisements - a fatal nest of inevitable power. The real life sound trendy drama transforming the city and the invisible into 9 pieces of music.
             p
@@ -36,3 +42,16 @@ block main
     .container-md
       .video
         iframe(width="560" height="315" src="https://www.youtube.com/embed/w87TCZbYdcQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="")
+  footer
+    p.copyright
+      | &copy; 2019 Tasho Ishi
+    ul.list__links
+      li
+        a(href='#', trget='_blank')
+          img(src=images + 'icon__discogs.svg')
+      li
+        a(href='#', trget='_blank')
+          img(src=images + 'icon__youtube.svg')
+      li
+        a(href='#', trget='_blank')
+          img(src=images + 'icon__gmail.svg')

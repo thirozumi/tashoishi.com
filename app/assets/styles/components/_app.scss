@@ -1,9 +1,37 @@
-main, aside {
+header, main, aside, footer {
   margin: 2em 0;
 }
 
-.text__description {
-  text-transform: uppercase;
+h1 {
+  margin: 0 0 .75em;
+  > small {
+    display: block;
+  }
+}
+
+.section {
+  &__header {}
+  &__description {}
+}
+
+p {
+  margin: 0 0 1.5em;
+}
+
+footer {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.list__links {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  > li {
+    margin: 0 .5em;
+  }
 }
 
 .video {
