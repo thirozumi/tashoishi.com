@@ -13,7 +13,6 @@ const gulp = require('gulp'),
       autoprefixer = require("gulp-autoprefixer"),
       jshint = require("gulp-jshint"),
       rename = require("gulp-rename"),
-      data = require("gulp-data"),
       browsersync = require("browser-sync").create(),
       fs = require('fs'),
       del = require('del'),
@@ -75,12 +74,6 @@ gulp.task('templates', function (done) {
     'app/templates/**/*.pug',
     '!app/templates/_layouts/*.pug'
     ])
-    .pipe(data(function(file) {
-      return {
-        'meta': JSON.parse(fs.readFileSync('app/assets/data/meta.json')),
-        'index': JSON.parse(fs.readFileSync('app/assets/data/index.json'))
-      }
-    }))
     .pipe(plumber())
     .pipe(pug(option))
     .pipe(gulp.dest(dist))
@@ -130,7 +123,7 @@ gulp.task('watch', function(done) {
   gulp.watch(['app/assets/scripts/**/*.js'], gulp.task('scripts'));
   gulp.watch(['app/assets/images/**/*.{png,jpg,gif,svg}'], gulp.task('images'));
   gulp.watch(['app/assets/fonts/**/*'], gulp.task('fonts'));
-  gulp.watch(['app/templates/**/*.pug','app/assets/data/**/*.json'], gulp.task('templates'));
+  gulp.watch(['app/templates/**/*.pug'], gulp.task('templates'));
   done();
 });
 
