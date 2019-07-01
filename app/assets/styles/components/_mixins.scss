@@ -52,9 +52,9 @@
 
 // Flexbox Grid
 @mixin row() {
-  overflow: hidden;
   margin-left: -#{$gutter / 2};
   margin-right: -#{$gutter / 2};
+  overflow: hidden;
   display: flex;
   flex: 0 1 auto;
   flex-direction: row;

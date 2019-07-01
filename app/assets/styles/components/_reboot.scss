@@ -18,7 +18,6 @@ body {
   font-family: $font-family-base;
   line-height: $line-height;
   @include font-size($fs-base);
-  font-feature-settings: 'pkna' 1;
 }
 
 // Reset fonts for relevant elements
@@ -34,12 +33,11 @@ textarea {
 // Links
 a {
   color: $link-color;
-  text-decoration: none;
-
+  text-decoration: underline;
   &:hover,
   &:focus {
     color: $link-hover-color;
-    text-decoration: underline;
+    text-decoration: none;
   }
 }
 

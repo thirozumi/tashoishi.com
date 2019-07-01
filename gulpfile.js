@@ -96,13 +96,6 @@ gulp.task('scripts', function(done){
   done();
 });
 
-gulp.task('sounds', function() {
-  return gulp.src([
-    'app/assets/sounds/**/*'
-  ])
-  .pipe(gulp.dest(dist + '/assets/sounds'));
-});
-
 gulp.task('fonts', function() {
   return gulp.src([
     'app/assets/fonts/**/*'
@@ -127,5 +120,5 @@ gulp.task('watch', function(done) {
   done();
 });
 
-gulp.task('build', gulp.series('clean', 'templates','styles','scripts', 'sounds', 'images', 'fonts'));
+gulp.task('build', gulp.series('clean', 'templates','styles','scripts', 'images', 'fonts'));
 gulp.task('default', gulp.task('build'));

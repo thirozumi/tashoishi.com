@@ -1,36 +1,65 @@
-header, main, aside, footer {
-  margin: 2em 0;
-}
-
 h1 {
-  margin: 0 0 .75em;
-  > small {
-    display: block;
+  // margin: .25em -#{$gutter / 4};
+  margin: .25em 0;
+  > img {
+    width: 100%;
   }
 }
 
-.section {
-  &__header {}
-  &__description {}
+h2 {
+  margin: 0 0 .75em;
+  > small {
+    display: inline-block;
+    font-size: inherit;
+    &:before {
+      content: '/';
+      margin: 0 .3em;
+    }
+  }
 }
 
-p {
+p, dl, ul, ol {
   margin: 0 0 1.5em;
 }
 
-footer {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+dl.dl__horizontal {
+  dt, dd {
+    display: inline-block;
+  }
+  dt {
+    &:after {
+      content: ':';
+      margin-right: .2em;
+    }
+  }
+  dd {
+    margin-right: 1em;
+  }
+}
+
+ol {
+  padding-left: 0;
+  list-style-position: inside;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.text__xs {
+  @include font-size($fs-xs);
 }
 
 .list__links {
+  @include font-size($fs-xs);
   display: flex;
   list-style: none;
   padding-left: 0;
   > li {
     margin: 0 .5em;
+    &:first-child { margin-left: 0; }
+    &:last-child { margin-right: 0; }
   }
 }
 
@@ -45,5 +74,17 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
+  }
+}
+
+.copyright {
+  @include font-size($fs-xs);
+}
+
+footer {
+  padding: 1.5em 0 0;
+  @media #{$breakpoint-sm-up} {
+    display: flex;
+    justify-content: space-between;
   }
 }
