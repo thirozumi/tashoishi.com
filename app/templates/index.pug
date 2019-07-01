@@ -18,7 +18,7 @@ block main
         h2
           | Dentsu2060
           small Tasho Ishi
-        ol
+        ol.list__inline
           li Dentsu2060
           li Birdland
           li w i n d c o a t
@@ -28,16 +28,25 @@ block main
           li Window of Honey Trap
           li Chase The Rainbow Bridge
           li Toshi
-        ul.text__xs
-          li Written, recorded, produced and mixed by Tasho ishi
-          li mix engineer by kazuaki oshima,Naoya tokunou
-          li Mastered by Giuseppe Ielasi
-          li Recorded at Oshima midi center minami-aoyama
-        dl.dl__horizontal.text__xs
-          dt Presto!?
-          dd P!?033
-        p.text__xs
-          a(href='https://prestorecords.bandcamp.com') https://prestorecords.bandcamp.com
+        .text__xs
+          ul
+            li Written, recorded, produced and mixed by Tasho ishi
+            li Mix engineer by Kazuaki Oshima, Naoya Tokunou
+            li Mastered by Giuseppe Ielasi
+            li Recorded at Oshima midi center minami-aoyama
+          dl.dl__horizontal
+            dt Presto!?
+            dd P!?033
+          ul.list__horizontal
+            li
+              a(href='https://prestorecords.bandcamp.com', target='_blank')
+                | BANDCAMP
+            li
+              a(href='https://open.spotify.com/album/6mA6ajZRIS3ieMdcx3tfgF', target='_blank')
+                | SPOTIFY
+            li
+              a(href='https://music.apple.com/jp/album/dentsu2060/1469526506', target='_blank')
+                | APPLE MUSIC
       .col-sm-6
         p
           | A science fantasy symphonia distilled from the unconscious stress and stimulation culled from Tokyo's   buildings, fashion, illumination, advertisements - a fatal nest of inevitable power. The real life sound trendy drama transforming the city and the invisible into 9 pieces of music.
@@ -56,13 +65,10 @@ block main
     .video
       iframe(width="560" height="315" src="https://www.youtube.com/embed/w87TCZbYdcQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="")
     footer
-      ul.list__links
+      ul.list__horizontal
         li
           a(href='https://www.discogs.com/ja/artist/7232491-Tasho-Ishi', target='_blank')
             | DISCOGS
-        li
-          a(href='https://music.apple.com/jp/album/dentsu2060/1469526506', target='_blank')
-            | APPLE MUSIC
         li
           a(href='https://www.youtube.com/channel/UCYILV7whiaGllY65Gif27DQ/videos?view=0&sort=dd&shelf_id=1&view_as=subscriber', target='_blank')
             | YOUTUBE

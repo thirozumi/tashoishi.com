@@ -1,6 +1,9 @@
 h1 {
-  // margin: .25em -#{$gutter / 4};
   margin: .25em 0;
+  margin-left: -#{$gutter / 4};
+  @media #{$breakpoint-sm-up} {
+    margin-left: -#{$gutter / 2};
+  }
   > img {
     width: 100%;
   }
@@ -51,8 +54,7 @@ ul {
   @include font-size($fs-xs);
 }
 
-.list__links {
-  @include font-size($fs-xs);
+.list__horizontal {
   display: flex;
   list-style: none;
   padding-left: 0;
@@ -60,6 +62,18 @@ ul {
     margin: 0 .5em;
     &:first-child { margin-left: 0; }
     &:last-child { margin-right: 0; }
+  }
+}
+
+.list__inline {
+  > li {
+    counter-increment: li;
+    display: inline-block;
+    margin-right: .5em;
+    &:before {
+      content: counter(li) '.';
+      margin-right: .5em;
+    }
   }
 }
 
@@ -77,11 +91,8 @@ ul {
   }
 }
 
-.copyright {
-  @include font-size($fs-xs);
-}
-
 footer {
+  @include font-size($fs-xs);
   padding: 1.5em 0 0;
   @media #{$breakpoint-sm-up} {
     display: flex;
