@@ -54,12 +54,12 @@ gulp.task('styles', function (done) {
       outputStyle: 'compressed'
     }))
     .pipe(autoprefixer({
-      browsers: [
-        "last 3 versions",
-        "ie >= 9",
-        "Android >= 4",
-        "ios_saf >= 8"
-      ]}))
+      "overrideBrowserslist": [
+      "last 1 version",
+      "> 1%",
+      "maintained node versions",
+      "not dead"
+    ]}))
     .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest(dist + '/assets/styles'))
     .pipe(browsersync.stream());
