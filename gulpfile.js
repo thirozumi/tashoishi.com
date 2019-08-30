@@ -96,13 +96,6 @@ gulp.task('scripts', function(done){
   done();
 });
 
-gulp.task('fonts', function() {
-  return gulp.src([
-    'app/assets/fonts/**/*'
-  ])
-  .pipe(gulp.dest(dist + '/assets/fonts'));
-});
-
 gulp.task('watch', function(done) {
   browsersync.init({
     server: {
@@ -115,10 +108,9 @@ gulp.task('watch', function(done) {
   gulp.watch(['app/assets/styles/**/*.scss'], gulp.task('styles'));
   gulp.watch(['app/assets/scripts/**/*.js'], gulp.task('scripts'));
   gulp.watch(['app/assets/images/**/*.{png,jpg,gif,svg}'], gulp.task('images'));
-  gulp.watch(['app/assets/fonts/**/*'], gulp.task('fonts'));
   gulp.watch(['app/templates/**/*.pug'], gulp.task('templates'));
   done();
 });
 
-gulp.task('build', gulp.series('clean', 'templates','styles','scripts', 'images', 'fonts'));
+gulp.task('build', gulp.series('clean', 'templates','styles','scripts', 'images'));
 gulp.task('default', gulp.task('build'));

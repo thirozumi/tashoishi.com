@@ -1,5 +1,5 @@
 h1 {
-  margin: .25em 0;
+  margin: .5em 0;
   margin-left: -#{$gutter / 4};
   @media #{$breakpoint-sm-up} {
     margin-left: -#{$gutter / 2};

@@ -14,10 +14,10 @@ $link-color:              $brand-primary !default;
 $link-hover-color:        $link-color !default;
 
 // Typography
-$font-family-sans-serif: 'Sporting Grotesque_Regular', -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif !default;
-$font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
+$font-family-sans-serif: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif !default;
+$font-family-serif:       "Times New Roman", Times, serif !default;
 $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
-$font-family-base:        $font-family-sans-serif !default;
+$font-family-base:        $font-family-serif !default;
 $font-weight-base:        300 !default;
 
 // Font Size
@@ -46,7 +46,7 @@ $font-size-h4:            $font-size-base !default;
 $font-size-h5:            $font-size-base !default;
 $font-size-h6:            $font-size-base !default;
 
-$line-height:             1.6 !default;
+$line-height:             1.8 !default;
 $spacer:                  $line-height * $font-size-base !default;
 
 //** By default, this inherits from the `<body>`.
