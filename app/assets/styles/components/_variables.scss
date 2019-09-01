@@ -27,9 +27,9 @@ $font-size-huge:          4.8rem !default;
 $font-size-xl:            3.2rem !default;
 $font-size-lg:            2.4rem !default;
 $font-size-base:          2rem !default;
-$font-size-sm:            1.6rem !default;
-$font-size-xs:            1.4rem !default;
-$font-size-tiny:          1.2rem !default;
+$font-size-sm:            1.8rem !default;
+$font-size-xs:            1.6rem !default;
+$font-size-tiny:          1.4rem !default;
 
 $fs-tiny: (null: $font-size-tiny,  $fs-breakpoint: $font-size-tiny) !default;
 $fs-xs:   (null: $font-size-tiny,  $fs-breakpoint: $font-size-xs) !default;
@@ -46,7 +46,7 @@ $font-size-h4:            $font-size-base !default;
 $font-size-h5:            $font-size-base !default;
 $font-size-h6:            $font-size-base !default;
 
-$line-height:             1.8 !default;
+$line-height:             1.6 !default;
 $spacer:                  $line-height * $font-size-base !default;
 
 //** By default, this inherits from the `<body>`.
